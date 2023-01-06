@@ -13,9 +13,9 @@ mod 'puppetlabs/stdlib'  # If no version is specified the latest version availab
 # Git Modules
 # If not pinned, then keep it up to date with 'master'
 mod 'apache',
-  :git => 'https://github.com/puppetlabs/puppetlabs-apache'#, 
+  :git => 'https://github.com/puppetlabs/puppetlabs-apache', 
+  :tag => '0.9.0'
   #:branch => 'docs_experiment'
-  #:tag => '0.9.0'
   #:commit => '83401079053dca11d61945bd9beef9ecf7576cbf'
   #:branch => :control_branch  # the content should track a branch reference matching the containing control repo branch.
   #:default_branch => 'master'  # if the desired pin cannot be resolved
