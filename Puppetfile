@@ -20,6 +20,10 @@ mod 'apache',
   #:branch => :control_branch  # the content should track a branch reference matching the containing control repo branch.
   #:default_branch => 'master'  # if the desired pin cannot be resolved
 
+mod 'saz-memcached', '8.1.0'
+
+mod 'puppetlabs-wordpress_app', '0.2.0'
+
 # Other sources for Modules
 # - tarball (fetched via URL)
 # - local
