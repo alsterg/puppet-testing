@@ -24,6 +24,10 @@ mod 'saz-memcached', '8.1.0'
 
 mod 'puppetlabs-wordpress_app', '0.2.0'
 
+mod 'puppetlabs-java', '9.0.1'
+
+mod 'rtyler-jenkins', '1.7.0'
+
 # Other sources for Modules
 # - tarball (fetched via URL)
 # - local
