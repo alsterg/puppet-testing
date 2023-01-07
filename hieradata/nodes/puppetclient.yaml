@@ -1,0 +1,10 @@
+---
+classes:
+  - apache
+  - memcached
+  - wordpress
+  - role::jenkins::controller
+
+profile::jenkins::controller::jenkins_port: '8080'
+#profile::jenkins::controller::java_dist: 'oracle-jdk8'
+#profile::jenkins::controller::java_version: '8u92'
