@@ -1,2 +1,5 @@
 ---
-message: "This node is using agent data"
+classes:
+  - apache
+  - memcached
+  - wordpress

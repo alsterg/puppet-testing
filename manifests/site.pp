@@ -1,5 +1,10 @@
+# The hiera_include function requests a list of class names from Hiera, then declares all of them.
+# Because hiera_include uses the array lookup type, it gets a combined list that includes classes 
+# from every level of the hierarchy. This allows you to abandon node definitions and use Hiera like 
+# a lightweight external node classifier.
 hiera_include('classes')
 
+###################################################################################################
 ## Alternatively of using Hiera, you can use Puppet's native "Node Definition" mechanism
 ## https://www.puppet.com/docs/puppet/7/lang_node_definitions.html
 
