@@ -3,6 +3,8 @@
 # from every level of the hierarchy. This allows you to abandon node definitions and use Hiera like 
 # a lightweight external node classifier.
 hiera_include('classes')
+# I think the above is equivalent to:
+# lookup('classes', {merge => unique}).include
 
 ###################################################################################################
 ## Alternatively of using Hiera, you can use Puppet's native "Node Definition" mechanism
@@ -45,3 +47,6 @@ hiera_include('classes')
 #      ensure => latest 
 #   } 
 #} 
+
+# It can also inherit:
+#node 'brcleprod004.brcl.com' inherits 'brcleloacl003.brcl.com' { ... }
