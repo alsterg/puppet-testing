@@ -7,7 +7,10 @@ defaults:  # Used for any hierarchy level that omits these keys.
 :backends:
   - yaml
 
-hierarchy:  # All the matches are applied in order listed here
+# “defaults, with overrides”
+# All *present* files are evaluation in order listed here, and for a given variable (e.g ntp::servers)
+# the first defined is used.
+hierarchy:
   - name: "Per-node data"                   # Human-readable name.
     path: "nodes/%{trusted.certname}.yaml"  # File path, relative to datadir.
                                    # ^^^ IMPORTANT: include the file extension!
