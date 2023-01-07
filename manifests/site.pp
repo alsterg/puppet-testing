@@ -34,3 +34,9 @@ hiera_include('classes')
   #   class { 'my_class': }
   #include common
 #}
+
+node 'agent' { 
+   package { ['SSL'] : 
+      ensure => latest 
+   } 
+} 
