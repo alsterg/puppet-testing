@@ -1,6 +1,7 @@
 hiera_include('classes')
 
-## site.pp ##
+## Alternatively of using Hiera, you can use Puppet's native "Node Definition" mechanism
+## https://www.puppet.com/docs/puppet/7/lang_node_definitions.html
 
 # This file (./manifests/site.pp) is the main entry point
 # used when an agent connects to a master and asks for an updated configuration.
@@ -23,11 +24,13 @@ hiera_include('classes')
 # every node's catalog.
 #
 # Note that node definitions in this file are merged with node data from the
-# Puppet Enterprise console and External Node Classifiers (ENC's).
+# Puppet Enterprise console and External Node Classifiers (ENC's) (if enabled).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
-#node default {
-  # This is where you can declare classes for all nodes.
+#node default {  # Can be a specific node name; or a regular expression that match on node names. Or list of these.
+  # Any mixture of class declarations, variables, resource declarations, collectors, conditional statements, chaining relationships, and functions.
+  # NOTE: Although node definitions can contain almost any Puppet code, we recommend that you use them only to set variables and declare classes. Avoid putting resource declarations, collectors, conditional statements, chaining relationships, and functions in node definitions; all of these belong in classes or defined types.
   # Example:
   #   class { 'my_class': }
+  #include common
 #}
